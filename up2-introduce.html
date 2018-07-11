@@ -1,105 +1,229 @@
 ﻿<!DOCTYPE HTML>
 <!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Massively by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Elements Reference - Massively by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-loading">
+<head>
+    <title>Elements Reference - Massively by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/up2-introduce-style1.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body class="is-loading">
 
-		<!-- Wrapper -->
-        <div id="wrapper">
+    <!-- Wrapper -->
+    <div id="wrapper">
 
-            <!-- Header -->
-            <header id="header">
-                <a href="#" id="tt" class="logo" style="font-family:'Microsoft JhengHei';">復健方式-需手術</a>
-            </header>
+        <!-- Header -->
+        <header id="header">
+            <a href="#" id="tt" class="logo" style="font-family:'Microsoft JhengHei';">復健方式 — 屈指肌腱</a>
+        </header>
 
-            <!-- Nav -->
-            <nav id="nav">
-                <ul class="links clearfix">
-                 <li><a style="cursor:pointer;" a href="introduce.html">回介紹</a></li>
-                    <li><a href="#tab1" onclick="myFunction1(), toggleVideo(), toggleVideo1('hide'), toggleVideo2('hide')"  >需手術</a></li>
-                    <li><a href="#tab2"  onclick="myFunction(),toggleVideo('hide')" >不需手術</a></li>
-                </ul>
-            </nav>
-            <!-- Main -->
-            <div id="main" style="padding:0px;">
-                <section style="padding:0px;">
-                    <center style="padding:0px;">
-                          <div id="tab1" class="content" style="padding:2%;">
-                           <iframe width="100%" height="560" src="https://www.youtube.com/embed/IUiYlWS-msY?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
-                          </div>
-                          <div id="tab2" class="content" style="display:none;padding:2%;">
-                              <ul class="actions fit clearfix">
-										<li><a href="#tab3" class="button special fit" onclick="toggleVideo1(),toggleVideo2('hide')">徒手復位</a></li>
-										<li><a href="#tab4" class="button special fit"  onclick="toggleVideo1('hide'),toggleVideo2()">石膏固定</a></li>
-				                </ul>
-                              <div id="tab3" class="content" style="padding:2%;">
-                           <iframe width="100%" height="560"  src="https://www.youtube.com/embed/wdxZRtfiDJE?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links clearfix">
+                <li><a style="cursor:pointer;" a href="introduce.html">回介紹</a></li>
+                <li><a href="#tab1" onclick="myFunction(), toggleVideo(), toggleVideo1('hide'), toggleVideo2('hide')">屈指肌腱</a></li>
+                <li><a href="#tab2" onclick="myFunction1(),toggleVideo('hide')">伸直肌腱</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main" style="padding:0px;">
+            <section style="padding:0px;">
+                <center style="padding:0px;">
+                    <div id="tab1" class="content" style="padding:2%;">
+                        <button id="btnweek1" class="btnweek activeweek" onclick="btnweek1()">1-3週</button>
+                        <button id="btnweek2" class="btnweek" onclick="btnweek2()">4-6週</button>
+                        <button id="btnweek3" class="btnweek" onclick="btnweek3()">6-8週</button>
+                        <button id="btnweek4" class="btnweek" onclick="btnweek4()">8-12週</button>
+                        <div id="flexor">
+                            <div class="flexor1">
+                                <div class="flexor_warpper">
+                                    <ol>
+                                        <li>
+                                            穿戴副木
+                                            <ul style="margin:0 0 15px 10px;">
+                                                <li>需穿戴副木三週(注意事項：避免移除副木而造成肌腱再次斷裂)</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            傷口照護
+                                            <ul style="margin:0 0 15px 10px;">
+                                                <li>避免碰水</li>
+                                                <li style="margin-top:-15px;">保持傷口清潔</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            水腫控制與預防技巧
+                                            <ul style="margin:0 0 15px 10px;">
+                                                <li>將手抬高至心臟高度</li>
+                                                <li style="margin-top:-15px;">拆線傷口癒合後，可做向心按摩(從手指末端朝手肘方向按摩)</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            疤痕控制
+                                            <ul style="margin:0 0 15px 10px;">
+                                                <li>拆線後傷口癒合後可使用深壓按摩</li>
+                                            </ul>
+                                        </li>
+                                        <li>三週時經醫師評估後可轉介復健部職能治療，訂定後續復健計畫</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="flexor2" style="display:none;">
+                                <div class="flexor_warpper">
+                                    <ol>
+                                        <li>經治療師評估後移除副木，改用護腕</li>
+                                        <li>
+                                            持續水腫控制
+                                            <ul style="margin:0 0 15px 10px;">
+                                                <li>五週後可將手臂伸直舉高，並做重複握拳的運動</li>
+                                            </ul>
+                                        </li>
+                                        <li>持續疤痕控制</li>
+                                        <li>此階段不可從事阻力性活動 </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="flexor3" style="display:none;">
+                                <div class="flexor_warpper">
+                                    <ol>
+                                        <li>持續水腫及疤痕控制</li>
+                                        <li>可開始使用患手執行功能性活動，例如拿取牙刷或杯子</li>
+                                        <li>經治療師評估，可進行輕阻力運動</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="flexor4" style="display:none;">
+                                <div class="flexor_warpper">
+                                    <ol>
+                                        <li>
+                                            運動計畫
+                                            <ul style="margin:0 0 15px 10px;">
+                                                <li>以提升肌力與肌耐力為主要目標，在此時期，訓練時阻力的量及時間都要提升</li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
                         </div>
-                              <div id="tab4" class="content" style="display:none;padding:2%;">
-                                  <iframe width="100%" height="560" src="https://www.youtube.com/embed/hmC3C2Gi5gs?enablejsapi=1" frameborder="0" allowfullscreen></iframe>                      
+                        <!--<iframe width="100%" height="560" src="https://www.youtube.com/embed/IUiYlWS-msY?enablejsapi=1" frameborder="0" allowfullscreen></iframe>-->
+                    </div>
+                    <div id="tab2" class="content" style="display:none;padding:2%;">
+                        <ul class="actions fit clearfix">
+                            <li><a href="#tab3" class="button special fit" onclick="toggleVideo1(),toggleVideo2('hide')">徒手復位</a></li>
+                            <li><a href="#tab4" class="button special fit" onclick="toggleVideo1('hide'),toggleVideo2()">石膏固定</a></li>
+                        </ul>
+                        <div id="tab3" class="content" style="padding:2%;">
+                            <iframe width="100%" height="560" src="https://www.youtube.com/embed/wdxZRtfiDJE?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
                         </div>
-                              </div>
-                    </center>
-                </section>
-            </div>
-</div>
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-        	<script src="assets/js/main.js"></script>
+                        <div id="tab4" class="content" style="display:none;padding:2%;">
+                            <iframe width="100%" height="560" src="https://www.youtube.com/embed/hmC3C2Gi5gs?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </center>
+            </section>
+        </div>
 
-<script>
-            $(function(){
-    var $li = $('ul.clearfix li');
-    
-        // 進入時預設點擊第一個頁籤，除了第一個 content 其他 content 隱藏
-        $($li. eq(0) .addClass('active').find('a').attr('href')).siblings('.content').hide();
-    
-        $li.click(function(){
-            $($(this).find('a'). attr ('href')).show().siblings ('.content').hide();
-            $(this).addClass('active'). siblings ('.active').removeClass('active');
+
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        // Add active class to the current button (highlight it)
+        var header = document.getElementById("tab1");
+        var btns = header.getElementsByClassName("btnweek");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("activeweek");
+                current[0].className = current[0].className.replace(" activeweek", "");
+                this.className += " activeweek";
+            });
+        }
+    </script>
+
+    <script>
+        $(function () {
+            var $li = $('ul.clearfix li');
+
+            // 進入時預設點擊第一個頁籤，除了第一個 content 其他 content 隱藏
+            $($li.eq(0).addClass('active').find('a').attr('href')).siblings('.content').hide();
+
+            $li.click(function () {
+                $($(this).find('a').attr('href')).show().siblings('.content').hide();
+                $(this).addClass('active').siblings('.active').removeClass('active');
+            });
         });
-    });
-    function myFunction() {
-    document.getElementById("tt").innerHTML= "復健方式-不需手術";
-}
-     function myFunction1() {
-    document.getElementById("tt").innerHTML= "復健方式-需手術";
-}
-    function toggleVideo(state) {
-    // if state == 'hide', hide. Else: show video
-    var div = document.getElementById("tab1");
-    var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
-    func = state == 'hide' ? 'pauseVideo' : 'playVideo';
-    iframe.postMessage('{"event":"command","func":"' + func + '","args":""}','*');
-}
-     function toggleVideo1(state) {
-    // if state == 'hide', hide. Else: show video
-    var div = document.getElementById("tab3");
-    var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
-    func = state == 'hide' ? 'pauseVideo' : 'playVideo';
-    iframe.postMessage('{"event":"command","func":"' + func + '","args":""}','*');
-}
-     function toggleVideo2(state) {
-         // if state == 'hide', hide. Else: show video
-         var div = document.getElementById("tab4");
-         var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
-         func = state == 'hide' ? 'pauseVideo' : 'playVideo';
-         iframe.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
-     }
-            </script>
-	</body>
+
+        function btnweek1() {
+            $(".flexor1").show();
+            $(".flexor2").hide();
+            $(".flexor3").hide();
+            $(".flexor4").hide();
+
+        }
+        function btnweek2() {
+            $(".flexor2").show();
+            $(".flexor1").hide();
+            $(".flexor3").hide();
+            $(".flexor4").hide();
+        }
+        function btnweek3() {
+            $(".flexor3").show();
+            $(".flexor1").hide();
+            $(".flexor2").hide();
+            $(".flexor4").hide();
+        }
+        function btnweek4() {
+            $(".flexor4").show();
+            $(".flexor1").hide();
+            $(".flexor2").hide();
+            $(".flexor3").hide();
+        }
+
+
+        function myFunction() {
+            document.getElementById("tt").innerHTML = "復健方式 — 屈指肌腱";
+        }
+        function myFunction1() {
+            document.getElementById("tt").innerHTML = "復健方式 — 伸直肌腱";
+        }
+
+        function toggleVideo(state) {
+            // if state == 'hide', hide. Else: show video
+            var div = document.getElementById("tab1");
+            var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
+            func = state == 'hide' ? 'pauseVideo' : 'playVideo';
+            iframe.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+        }
+        function toggleVideo1(state) {
+            // if state == 'hide', hide. Else: show video
+            var div = document.getElementById("tab3");
+            var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
+            func = state == 'hide' ? 'pauseVideo' : 'playVideo';
+            iframe.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+        }
+        function toggleVideo2(state) {
+            // if state == 'hide', hide. Else: show video
+            var div = document.getElementById("tab4");
+            var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
+            func = state == 'hide' ? 'pauseVideo' : 'playVideo';
+            iframe.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+        }
+    </script>
+</body>
 </html>
