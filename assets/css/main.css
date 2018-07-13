@@ -1853,6 +1853,7 @@ hr {
 
 .box {
     border: solid 2px;
+    border-radius: 8px;
     margin-bottom: 2rem;
     padding: 1.5rem;
 }
@@ -1870,7 +1871,10 @@ hr {
     }
 
 .box {
-    border-color: #eeeeee;
+    border-color: #000;
+}
+.box:after{
+    display: none;
 }
 
 /* Button */
@@ -4513,4 +4517,27 @@ body.is-loading #intro {
         box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.2);
         visibility: visible;
     }
+}
+
+
+.weekbox{
+    font-size: 16px;
+    height: 3rem;
+    width: 70%;
+    background-image: linear-gradient(transparent 0px,transparent  1.25rem,#e2e2e2 1.25rem, #e2e2e2 1.75rem,transparent 1.75em,transparent  3rem);
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 1rem
+}
+
+.weekbtn{
+    background-color:rgb(104, 96, 91);
+    border:0px solid;
+    border-radius: 8px;
+    color: #fff;
+    height: 3rem;
+    width:  8rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
+    font-weight: 900;
 }

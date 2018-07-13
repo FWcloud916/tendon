@@ -10,11 +10,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/up2-introduce-style1.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
-<body class="is-loading">
+<body class="is-loading" onload="initialPage()">
 
     <!-- Wrapper -->
     <div id="wrapper">
@@ -37,13 +36,26 @@
         <div id="main" style="padding:0px;">
             <section style="padding:0px;">
                 <center style="padding:0px;">
-                    <div id="tab1" class="content" style="padding:2%;">
-                       tab1
+                    <div id="tab1" class="content" style="display:none; padding:2%;">
+                        <div class="weekbox">
+                            <div class="weekbtn">
+                                1-6週
+                            </div>
+                            <div class="weekbtn">
+                                第7週
+                            </div>
+                            <div class="weekbtn">
+                                第8週後
+                            </div>
+                            <div class="weekbtn"></div>
+                        </div>
+                        
+                        <div class="box"></div>
                     </div>
-                    <div id="tab2" class="content" style="display:none;padding:2%;">
+                    <div id="tab2" class="content" style="display:none; padding:2%;">
                        tab2
                     </div>
-                    <div id="tab3" class="content" style="display:none;padding:2%;">
+                    <div id="tab3" class="content" style="display:none; padding:2%;">
                         tab3
                     </div>
                 </center>
@@ -62,18 +74,6 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
-    <script>
-        // Add active class to the current button (highlight it)
-        var header = document.getElementById("tab1");
-        var btns = header.getElementsByClassName("btnweek");
-        for (var i = 0; i < btns.length; i++) {
-            btns[i].addEventListener("click", function () {
-                var current = document.getElementsByClassName("activeweek");
-                current[0].className = current[0].className.replace(" activeweek", "");
-                this.className += " activeweek";
-            });
-        }
-    </script>
 
     <script>
         $(function () {
@@ -88,32 +88,6 @@
             });
         });
 
-        function btnweek1() {
-            $(".flexor1").show();
-            $(".flexor2").hide();
-            $(".flexor3").hide();
-            $(".flexor4").hide();
-
-        }
-        function btnweek2() {
-            $(".flexor2").show();
-            $(".flexor1").hide();
-            $(".flexor3").hide();
-            $(".flexor4").hide();
-        }
-        function btnweek3() {
-            $(".flexor3").show();
-            $(".flexor1").hide();
-            $(".flexor2").hide();
-            $(".flexor4").hide();
-        }
-        function btnweek4() {
-            $(".flexor4").show();
-            $(".flexor1").hide();
-            $(".flexor2").hide();
-            $(".flexor3").hide();
-        }
-
 
         function myFunction() {
             document.getElementById("tt").innerHTML = "復健方式  — 錘狀指";
@@ -124,7 +98,12 @@
         function myFunction2() {
             document.getElementById("tt").innerHTML = "復健方式  — 近端掌指及前臂伸直肌腱受損";
         }
-
+        
+        function initialPage(){
+            var url = location.href;
+            var targetTab = url.split("#")[1];
+            document.getElementById(targetTab).style.display="block"
+        }
     </script>
 </body>
 </html>
