@@ -1873,9 +1873,10 @@ hr {
 .box {
     border-color: #000;
 }
-.box:after{
-    display: none;
-}
+
+    .box:after {
+        display: none;
+    }
 
 /* Button */
 
@@ -3711,17 +3712,17 @@ body.is-loading #intro {
         text-align: center;
     }*/
 
-        #main > .posts > article > :last-child {
-            margin-bottom: 0;
-        }
+    #main > .posts > article > :last-child {
+        margin-bottom: 0;
+    }
 
-        #main > .posts > article:nth-child(2n - 1) {
-            border-left-width: 0;
-        }
+    #main > .posts > article:nth-child(2n - 1) {
+        border-left-width: 0;
+    }
 
-        #main > .posts > article:nth-child(-n + 2) {
-            border-top-width: 0;
-        }
+    #main > .posts > article:nth-child(-n + 2) {
+        border-top-width: 0;
+    }
 
 @media screen and (max-width: 980px) {
 
@@ -4520,71 +4521,86 @@ body.is-loading #intro {
 }
 
 
-.weekbox{
+.weekbox {
     font-size: 16px;
     height: 3rem;
     width: 75%;
-    background-image: linear-gradient(transparent 0px,transparent  1.25rem,#e2e2e2 1.25rem, #e2e2e2 1.75rem,transparent 1.75em,transparent  3rem);
+    background-image: linear-gradient(transparent 0px,transparent 1.25rem,#e2e2e2 1.25rem, #e2e2e2 1.75rem,transparent 1.75em,transparent 3rem);
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     margin-bottom: 3rem;
 }
 
-.weekbtn{
-    background-color:#e2e2e2;
-    border:0px solid;
+.weekbtn {
+    background-color: #e2e2e2;
+    border: 0px solid;
     border-radius: 8px;
     color: #fff;
     height: 3rem;
-    width:  8rem;
+    width: 8rem;
     line-height: 3rem;
     font-size: 1.5rem;
     font-weight: 900;
-    transition:background-color 0.5s;
+    transition: background-color 0.5s;
+    cursor: pointer;
 }
-.weekbtn:hover{
-    background-color:rgb(104, 96, 91);
+
+    .weekbtn:hover {
+        background-color: rgb(104, 96, 91);
+    }
+
+.weekbtnactive {
+    background-color: rgb(104, 96, 91);
 }
-.weekbtnactive{
-    background-color:rgb(104, 96, 91);
-}
-.weekwrap{
+
+.weekwrap {
     width: 80%;
+    border-radius: 8px;
+    border: 2px solid !important;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding: 30px 50px;
+    color: black;
 }
-.weekwrap li{
-    text-align: left;
-    font-size:1.2rem;
-    font-weight: 500;
-}
-.weekwrap ul{
-    margin-bottom: 0;
-}
-@media screen and (max-width: 736px){
-    .weekbox{
+
+    .weekwrap li {
+        text-align: left;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .weekwrap ul {
+        margin-bottom: 0;
+    }
+
+@media screen and (max-width: 736px) {
+    .weekbox {
         width: 70%;
         height: 2rem;
-        background-image: linear-gradient(transparent 0px,transparent  0.75rem,#e2e2e2 0.75rem, #e2e2e2 1.25rem,transparent 1.25em,transparent  2rem);
+        background-image: linear-gradient(transparent 0px,transparent 0.75rem,#e2e2e2 0.75rem, #e2e2e2 1.25rem,transparent 1.25em,transparent 2rem);
         margin-bottom: 2rem;
     }
-    .weekbtn{
+
+    .weekbtn {
         font-size: 1rem;
         height: 2rem;
-        width:  5rem;
+        width: 5rem;
         line-height: 2rem;
         font-weight: 700;
     }
 }
 
-@media screen and (max-width: 480px){
-    .weekbox{
+@media screen and (max-width: 480px) {
+    .weekbox {
         width: 80%;
         height: 2rem;
         margin-bottom: 1.2rem;
-        background-image: linear-gradient(transparent 0px,transparent  0.75rem,#e2e2e2 0.75rem, #e2e2e2 1.25rem,transparent 1.25em,transparent  2rem);
+        background-image: linear-gradient(transparent 0px,transparent 0.75rem,#e2e2e2 0.75rem, #e2e2e2 1.25rem,transparent 1.25em,transparent 2rem);
     }
-    .weekbtn{
+
+    .weekbtn {
         font-size: 0.8rem;
-        width:  4rem;
+        width: 4rem;
         font-weight: 500;
     }
 }
