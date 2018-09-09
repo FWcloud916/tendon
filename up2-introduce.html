@@ -44,97 +44,100 @@
                 <center style="padding:0px;">
                     <div id="tab1" class="content" style="padding:2%;">
                         <div class="weekbox">
-                            <button id="btnweek1" class="btnweek activeweek" onclick="btnweek1()">1-3週</button>
-                            <button id="btnweek2" class="btnweek" onclick="btnweek2()">4-6週</button>
-                            <button id="btnweek3" class="btnweek" onclick="btnweek3()">6-8週</button>
-                            <button id="btnweek4" class="btnweek" onclick="btnweek4()">8-12週</button>
+                            <div class="weekbtn weekbtnactive" onclick="weekChange(1)">
+                                 1-3週
+                            </div>
+                            <div class="weekbtn" onclick="weekChange(2)">
+                                 4-6週
+                            </div>
+                            <div class="weekbtn" onclick="weekChange(3)">
+                                 6-8週
+                            </div>
+                            <div class="weekbtn" onclick="weekChange(4)">
+                                 8-12週
+                            </div>
+ 
                         </div>
-                        <div id="flexor">
-                            <div class="flexor1">
-                                <div class="flexor_warpper">
-                                    <ol>
-                                        <li>
-                                            穿戴副木
-                                            <ul style="margin:0 0 15px 10px;">
-                                                <li>需穿戴副木三週(注意事項：避免移除副木而造成肌腱再次斷裂)<i id="myImg1" class="fa fa-file-image-o" style="cursor:pointer;margin-left:5px;"></i></li>
-                                                <li style="margin-top:-15px;">避免近端指間關節屈曲攣縮</li>
-                                            </ul>
-                                        </li>
-                                        <li>傷口照護(避免碰水、保持傷口清潔)</li>
-                                        <li>
-                                            水腫控制與預防技巧
-                                            <ul style="margin:0 0 15px 10px;">
-                                                <li>將手抬高至心臟高度</li>
-                                                <li style="margin-top:-15px;">拆線傷口癒合後，可做向心按摩(從手指末端朝手肘方向按摩)<i id="myImg2" class="fa fa-file-video-o" style="cursor:pointer;margin-left:5px;"></i></li>
-                                            </ul>
-                                        </li>
-                                        <li>執行控制性活動<i id="myImg3" class="fa fa-file-image-o" style="cursor:pointer;margin-left:5px;"></i></li>
-                                        <li>
-                                            疤痕控制
-                                            <ul style="margin:0 0 15px 10px;">
-                                                <li>拆線後傷口癒合後可使用深壓按摩</li>
-                                            </ul>
-                                        </li>
-                                        <li>三週時經醫師評估後可轉介復健部職能治療，訂定後續復健計畫</li>
-                                    </ol>
-                                </div>
-                            </div>
-                            <div class="flexor2" style="display:none;">
-                                <div class="flexor_warpper">
-                                    <ol>
-                                        <li>經治療師評估後移除副木，改用護腕允許部分手腕動作<i id="myImg4" class="fa fa-file-image-o" style="cursor:pointer;margin-left:5px;"></i></li>
-                                        <li>
-                                            增進肌腱滑動範圍
-                                            <ul style="margin:0 0 15px 10px;">
-                                                <li>第4週 — 主動手指屈曲和放置並保持(Place and hold)運動</li>
-                                                <li style="margin-top:-15px;">第5週 — 肌腱滑動運動<i id="myImg5" class="fa fa-file-image-o" style="cursor:pointer;margin-left:5px;"></i>
-                                                <li style="margin-top:-15px;">第5週 — 藉由輕柔伸展運動防止近端指間關節屈曲攣縮和腕關節攣縮</li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            持續水腫控制
-                                            <ul style="margin:0 0 15px 10px;">
-                                                <li>五週後可將手臂伸直舉高，並做重複握拳的運動</li>
-                                            </ul>
-                                        </li>
-                                        <li>持續疤痕控制</li>
-                                        <li>此階段不可從事阻力性活動 </li>
-                                    </ol>
-                                </div>
-                            </div>
-                            <div class="flexor3" style="display:none;">
-                                <div class="flexor_warpper">
-                                    <ol>
-                                        <li>
-                                            主動肌腱滑行完全範圍以及兩條肌腱(屈指伸肌與淺肌)的最大個別性滑動
-                                            <ul style="margin:0 0 15px 10px;">
-                                                <li>Blocking運動<i id="myImg6" class="fa fa-file-image-o" style="cursor:pointer;margin-left:5px;"></i></li>
-                                                <li style="margin-top:-15px;">攣縮控制(溫和地被動拉伸肌腱和副木使用)</li>
-                                                <li style="margin-top:-15px;">加強手和上肢肌力<i id="myImg7" class="fa fa-file-image-o" style="cursor:pointer;margin-left:5px;"></i></li>
-                                            </ul>
-                                        </li>
-                                        <li>持續水腫及疤痕控制</li>
-                                        <li>可開始使用患手執行功能性活動，例如拿取牙刷或杯子</li>
-                                        <li>經治療師評估，可進行輕阻力運動(1-3磅)</li>
-                                    </ol>
-                                </div>
-                            </div>
-                            <div class="flexor4" style="display:none;">
-                                <div class="flexor_warpper">
-                                    <ol>
-                                        <li>
-                                            重阻力訓練
-                                            <ul style="margin:0 0 15px 10px;">
-                                                <li>以提升肌力與肌耐力為主要目標</li>
-                                                <li style="margin-top:-15px;">訓練時阻力的量及時間都要提升（握力和捏力測量）<i id="myImg8" class="fa fa-file-image-o" style="cursor:pointer;margin-left:5px;"></i></li>
-                                            </ul>
-                                        </li>
-                                        <li>重返工作崗位：工作強化訓練</li>
-                                    </ol>
-                                </div>
-                            </div>
+
+                        <div class="box weekwrap">
+                            <ol>
+                                <li>
+                                    穿戴副木
+                                    <ul style="margin:0 0 15px 10px;">
+                                        <li>需穿戴副木三週(注意事項：避免移除副木而造成肌腱再次斷裂)<i id="myImg1" class="fa fa-file-image-o" style="cursor:pointer;margin-left:5px;"></i></li>
+                                        <li style="margin-top:-15px;">避免近端指間關節屈曲攣縮</li>
+                                    </ul>
+                                </li>
+                                <li>傷口照護(避免碰水、保持傷口清潔)</li>
+                                <li>
+                                    水腫控制與預防技巧
+                                    <ul style="margin:0 0 15px 10px;">
+                                        <li>將手抬高至心臟高度</li>
+                                        <li style="margin-top:-15px;">拆線傷口癒合後，可做向心按摩(從手指末端朝手肘方向按摩)<i id="myImg2" class="fa fa-file-video-o" style="cursor:pointer;margin-left:5px;"></i></li>
+                                    </ul>
+                                </li>
+                                <li>執行控制性活動<i id="myImg3" class="fa fa-file-image-o" style="cursor:pointer;margin-left:5px;"></i></li>
+                                <li>
+                                    疤痕控制
+                                    <ul style="margin:0 0 15px 10px;">
+                                        <li>拆線後傷口癒合後可使用深壓按摩</li>
+                                    </ul>
+                                </li>
+                                <li>三週時經醫師評估後可轉介復健部職能治療，訂定後續復健計畫</li>
+                            </ol>
+                        </div>
+                   
+                        <div class="box weekwrap" style="display:none;">
+                            <ol>
+                                <li>經治療師評估後移除副木，改用護腕允許部分手腕動作<i id="myImg4" class="fa fa-file-image-o" style="cursor:pointer;margin-left:5px;"></i></li>
+                                <li>
+                                    增進肌腱滑動範圍
+                                    <ul style="margin:0 0 15px 10px;">
+                                        <li>第4週 — 主動手指屈曲和放置並保持(Place and hold)運動</li>
+                                        <li style="margin-top:-15px;">第5週 — 肌腱滑動運動<i id="myImg5" class="fa fa-file-image-o" style="cursor:pointer;margin-left:5px;"></i>
+                                        <li style="margin-top:-15px;">第5週 — 藉由輕柔伸展運動防止近端指間關節屈曲攣縮和腕關節攣縮</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    持續水腫控制
+                                    <ul style="margin:0 0 15px 10px;">
+                                        <li>五週後可將手臂伸直舉高，並做重複握拳的運動</li>
+                                    </ul>
+                                </li>
+                                <li>持續疤痕控制</li>
+                                <li>此階段不可從事阻力性活動 </li>
+                            </ol>
+                        </div>
+
+                        <div class="box weekwrap" style="display:none;">
+                            <ol>
+                                <li>
+                                    主動肌腱滑行完全範圍以及兩條肌腱(屈指伸肌與淺肌)的最大個別性滑動
+                                    <ul style="margin:0 0 15px 10px;">
+                                        <li>Blocking運動<i id="myImg6" class="fa fa-file-image-o" style="cursor:pointer;margin-left:5px;"></i></li>
+                                        <li style="margin-top:-15px;">攣縮控制(溫和地被動拉伸肌腱和副木使用)</li>
+                                        <li style="margin-top:-15px;">加強手和上肢肌力<i id="myImg7" class="fa fa-file-image-o" style="cursor:pointer;margin-left:5px;"></i></li>
+                                    </ul>
+                                </li>
+                                <li>持續水腫及疤痕控制</li>
+                                <li>可開始使用患手執行功能性活動，例如拿取牙刷或杯子</li>
+                                <li>經治療師評估，可進行輕阻力運動(1-3磅)</li>
+                            </ol>
+                        </div>
+                        <div class="box weekwrap" style="display:none;">
+                            <ol>
+                                <li>
+                                    重阻力訓練
+                                    <ul style="margin:0 0 15px 10px;">
+                                        <li>以提升肌力與肌耐力為主要目標</li>
+                                        <li style="margin-top:-15px;">訓練時阻力的量及時間都要提升（握力和捏力測量）<i id="myImg8" class="fa fa-file-image-o" style="cursor:pointer;margin-left:5px;"></i></li>
+                                    </ul>
+                                </li>
+                                <li>重返工作崗位：工作強化訓練</li>
+                            </ol>
                         </div>
                     </div>
+
                     <!-- The Modal -->
                     <div id="myModal1" class="modal">
                         <span class="close1">&times;</span>

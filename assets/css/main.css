@@ -4603,4 +4603,16 @@ body.is-loading #intro {
         width: 4rem;
         font-weight: 500;
     }
+    .weekwrap{
+        padding: 3px 5px;
+    }
+    .weekwrap li {
+        text-align: left;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .weekwrap ul {
+        margin-bottom: 0;
+    }
 }

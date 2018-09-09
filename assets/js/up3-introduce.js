@@ -1,4 +1,4 @@
-﻿var modal1 = document.getElementById('myModal1');
+var modal1 = document.getElementById('myModal1');
 var img1 = document.getElementById('myImg1');
 var modalImg1 = document.getElementById("img01");
 var captionText1 = document.getElementById("caption1");

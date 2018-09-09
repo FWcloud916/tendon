@@ -271,6 +271,7 @@
 function weekChange(id){
     var url = location.href;
     var targetTab = url.split("#")[1];
+    console.log(targetTab)
     var wtotal = document.getElementById(targetTab).children[0].children.length;
     for(var i=0 ;i < wtotal ; i++){
         document.getElementById(targetTab).children[0].children[i].className = "weekbtn"
@@ -281,4 +282,6 @@ function weekChange(id){
     }
     document.getElementById(targetTab).children[id].style.display = "block"
     document.getElementById(targetTab).children[0].children[id-1].className = "weekbtn weekbtnactive"
+
+    
 }
