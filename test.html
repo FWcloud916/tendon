@@ -53,7 +53,75 @@
         <!-- Main -->
         <div id="main" style="padding:0px;">
             <section>
+                
                 <center>
+                    <div class="box weekwrap">
+                        <ol id="qusetions">
+                            <li>
+                                屈指肌腱術後保護需達6 週。<br>
+                                <input type="radio" id="q_1_true" value="t" name="q_1">
+                                <label for="q_1_true"><h3>O</h3></label>
+                                <input type="radio" id="q_1_false" value="f" name="q_1">
+                                <label for="q_1_false"><h3>X</h3></label>
+                            </li>
+                            <li>
+                                於肌腱術後為避免過度水腫，需注意上肢經常擺放在高於心臟位 置。<br>
+                                <input type="radio" id="q_2_true" value="t" name="q_2">
+                                <label for="q_2_true"><h3>O</h3></label>
+                                <input type="radio" id="q_2_false" value="f" name="q_2">
+                                <label for="q_2_false"><h3>X</h3></label>
+                            </li>
+                            <li>術後第四週移除保護性副木，並且開始合適之主動運動。<br>
+                                <input type="radio" id="q_3_true" value="t" name="q_3">
+                                <label for="q_3_true"><h3>O</h3></label>
+                                <input type="radio" id="q_3_false" value="f" name="q_3">
+                                <label for="q_3_false"><h3>X</h3></label>
+                            </li>
+                            <li>疤痕處的深層按摩與合宜的主動運動均可以減少沾黏的產生。<br>
+                                <input type="radio" id="q_4_true" value="t" name="q_4">
+                                <label for="q_4_true"><h3>O</h3></label>
+                                <input type="radio" id="q_4_false" value="f" name="q_4">
+                                <label for="q_4_false"><h3>X</h3></label>
+                            </li>
+                            <li>術後第六週後可進行輕度的日常生活活動(開始輕微抗阻力動 作) ，例如拿牙刷、寫字等等。<br>
+                                <input type="radio" id="q_5_true" value="t" name="q_5">
+                                <label for="q_5_true"><h3>O</h3></label>
+                                <input type="radio" id="q_5_false" value="f" name="q_5">
+                                <label for="q_5_false"><h3>X</h3></label>
+                            </li>    
+                            <li>術後第八週然而仍不適合衝擊性阻力太大的活動，例如打鼓等活 動是被禁止的。<br>
+                                <input type="radio" id="q_6_true" value="t" name="q_6">
+                                <label for="q_6_true"><h3>O</h3></label>
+                                <input type="radio" id="q_6_false" value="f" name="q_6">
+                                <label for="q_6_false"><h3>X</h3></label>
+                            </li>
+                            <li>術後第九週可開始轉介工作強化中心，將強手部與上肢的肌力。<br>
+                                <input type="radio" id="q_7_true" value="t" name="q_7">
+                                <label for="q_7_true"><h3>O</h3></label>
+                                <input type="radio" id="q_7_false" value="f" name="q_7">
+                                <label for="q_7_false"><h3>X</h3></label>
+                            </li>
+                            <li>水腫僅需在保護階段控制，開始主動手指運動階段時則可不需注意水腫的控制。<br>
+                                <input type="radio" id="q_8_true" value="t" name="q_8">
+                                <label for="q_8_true"><h3>O</h3></label>
+                                <input type="radio" id="q_8_false" value="f" name="q_8">
+                                <label for="q_8_false"><h3>X</h3></label>
+                            </li>
+                            <li>屈指肌腱術後復健的早期治療階段，期治療目標在避免肌腱再斷 裂及減少肌腱的沾黏。<br>
+                                <input type="radio" id="q_9_true" value="t" name="q_9">
+                                <label for="q_9_true"><h3>O</h3></label>
+                                <input type="radio" id="q_9_false" value="f" name="q_9">
+                                <label for="q_9_false"><h3>X</h3></label>
+                            </li>
+                            <li>組織癒合階段已達疤痕重塑期，此期仍應該使用保護性副木以避 免肌腱斷裂。<br>
+                                <input type="radio" id="q_10_true" value="t" name="q_10">
+                                <label for="q_10_true"><h3>O</h3></label>
+                                <input type="radio" id="q_10_false" value="f" name="q_10">
+                                <label for="q_10_false"><h3>X</h3></label>
+                            </li>
+                        </ol>
+                        <button class="button button5" onclick="getAns()">算分</button>
+                    </div>
                     <button class="button button5" onclick="location.href='introduce.html'">回介紹</button>
                 </center>
             </section>
@@ -79,7 +147,41 @@
                 $(this).addClass('active').attr('id', 'active4').siblings('.active').removeClass('active').removeAttr('id', 'active4');
             });
         });
-    </script>
+        
+        function getAns() {
+            ans = [];
+            len = document.getElementById('qusetions').children.length;
+            for (var i = 1; i <= len ; i++){
+                qN = 'q_'+i;
+                a = document.getElementsByName(qN);
+                for (var j = 0,length = a.length; j < length; j++){
+                    if (a[j].checked) {
+                        ans.push(a[j].value);
+                        break;
+                    }
+                    else{
+                        ans.push('');
+                    }
+                }
+            }
+            score = countScore(ans);
+            alert(score);
+        }
 
+        function countScore(ans) {
+            score = 0;
+            cor = ['f','t','t','t','t','t','t','f','t','f'];
+            for (var i = 0; i< cor.length;i++){
+                if(cor[i] === ans[i]){
+                    score += 10;
+                }
+                else{
+                    score += 0;
+                }
+            }
+            return score;
+        }
+
+    </script>
 </body>
 </html>
